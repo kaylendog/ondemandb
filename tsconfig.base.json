@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"strict": true,
+		"esModuleInterop": true,
+		"alwaysStrict": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"incremental": true,
+		"forceConsistentCasingInFileNames": true,
+	},
+	"references": [
+		{
+			"path": "../database"
+		},
+		{
+			"path": "../backend"
+		},
+		{
+			"path": "../crawler"
+		}
+	]
+}

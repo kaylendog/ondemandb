@@ -1,0 +1,21 @@
+{
+	"name": "@needpg/backend",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"prepare": "yarn prisma generate"
+	},
+	"devDependencies": {
+		"@types/morgan": "^1.9.3",
+		"prisma": "^3.8.1"
+	},
+	"dependencies": {
+		"@prisma/client": "^3.8.1",
+		"dotenv": "^11.0.0",
+		"express": "^4.17.2",
+		"firebase-admin": "^10.0.1",
+		"morgan": "^1.10.0",
+		"winston": "^3.4.0"
+	}
+}
