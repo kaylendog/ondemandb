@@ -68,7 +68,6 @@ export class BackendServer {
 		this.app.listen(this.options.port);
 		// log success
 		this.logger.info(`🚀 Server ready at http://localhost:${this.options.port}`);
-		this.logger.info(` - API:        /v1`);
 		console.log();
 	}
 

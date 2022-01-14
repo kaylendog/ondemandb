@@ -1,8 +1,12 @@
-import { Brand, Login, StyledNav } from "./styles";
+import { Flex, Heading, Spacer } from "@chakra-ui/react";
+import { Account } from "./Account";
 
 export const Nav = () => (
-	<StyledNav>
-		<Brand>ondemandb</Brand>
-		<Login>Login</Login>
-	</StyledNav>
+	<Flex padding={"4"} alignItems={"center"}>
+		<Heading as="h2" size="md" isTruncated>
+			ondemandb
+		</Heading>
+		<Spacer />
+		<Account />
+	</Flex>
 );

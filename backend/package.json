@@ -2,9 +2,14 @@
 	"name": "@ondemandb/backend",
 	"version": "1.0.0",
 	"main": "index.js",
+	"author": {
+		"name": "SkyezerFox (Kaylen)",
+		"email": "actuallyori@gmail.com"
+	},
 	"license": "MIT",
 	"scripts": {
-		"prepare": "yarn prisma generate"
+		"prepare": "yarn prisma generate",
+		"dev": "ts-node-dev --respawn --exit-child src"
 	},
 	"devDependencies": {
 		"@types/morgan": "^1.9.3",
@@ -15,6 +20,7 @@
 		"dotenv": "^11.0.0",
 		"express": "^4.17.2",
 		"firebase-admin": "^10.0.1",
+		"joi": "^17.5.0",
 		"morgan": "^1.10.0",
 		"winston": "^3.4.0"
 	}

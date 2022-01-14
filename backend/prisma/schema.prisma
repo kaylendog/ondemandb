@@ -16,6 +16,10 @@ model User {
 enum DatabaseType {
   Postgres
   MySQL
+  MariaDB
+  MongoDB
+  Oracle
+  Redis
 }
 
 model Database {

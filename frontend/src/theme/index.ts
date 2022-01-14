@@ -1,17 +1,20 @@
-import { createGlobalStyle } from "styled-components";
+import { extendTheme } from "@chakra-ui/react";
 
-export const GlobalStyle = createGlobalStyle`
-html, body, #__next {
-	margin: 0;
-	font-family: 'Fira Sans', sans-serif;
-
-	background: #312f40;
-	color: rgb(255, 255, 255, 0.8);
-	font-weight: normal;
-}
-
-b {
-	color: white;
-	font-weight: bold;
-}
-`;
+export const theme = extendTheme({
+	colors: {
+		brand: {
+			900: "#1a365d",
+			800: "#153e75",
+			700: "#2a69ac",
+		},
+		backgroundColor: "black",
+	},
+	styles: {
+		global: {
+			body: {
+				bg: "black",
+				color: "white",
+			},
+		},
+	},
+});

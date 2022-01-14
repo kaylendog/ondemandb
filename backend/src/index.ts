@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-var-requires */
-import "reflect-metadata";
-
 import { config } from "dotenv";
 
 import { BackendServer } from "./server";
@@ -13,8 +11,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 console.log(`
-@gboxide/backend v${require("../package.json").version}
-Author: ${require("../package.json").author}
+@ondemandb/backend v${require("../package.json").version}
+Author: ${require("../package.json").author.name} <${require("../package.json").author.email}>
 `);
 
 const server = new BackendServer({
