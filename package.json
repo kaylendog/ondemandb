@@ -1,13 +1,11 @@
 {
-	"name": "gboxide",
+	"name": "needpg",
 	"version": "1.0.0",
 	"private": true,
-	"author": "SkyezerFox (Theo) <actuallyori@gmail.com>",
+	"author": "SkyezerFox (Kaylen) <actuallyori@gmail.com>",
 	"license": "MIT",
 	"workspaces": [
 		"backend",
-		"crawler",
-		"database",
 		"frontend"
 	],
 	"devDependencies": {
