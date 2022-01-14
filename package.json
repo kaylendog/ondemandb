@@ -30,7 +30,7 @@
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": "eslint --cache --fix",
-		"*.{ts,js,css,md,tsx}": "prettier --write",
+		"*.{ts,js,css,md,tsx,json}": "prettier --write",
 		"*.prisma": "yarn prisma format"
 	}
 }
