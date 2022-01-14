@@ -1,5 +1,5 @@
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -8,7 +8,42 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  uid       String             @id @unique
+  databases Database[]
+  creations DatabaseCreation[]
+}
+
+enum DatabaseType {
+  Postgres
+  MySQL
+}
+
+model Database {
+  id         String           @id @unique @default(uuid())
+  owner      User             @relation(fields: [ownerUid], references: [uid])
+  ownerUid   String
+  remote     Remote           @relation(fields: [remoteId], references: [id])
+  remoteId   String
+  maxSize    Int
+  lifespan   Int
+  type       DatabaseType
+  creation   DatabaseCreation @relation(fields: [creationId], references: [id])
+  creationId Int              @unique
+}
+
+model DatabaseCreation {
+  id        Int       @id @unique @default(autoincrement())
+  database  Database?
+  createdAt DateTime  @default(now())
+  host      String
+  user      User?     @relation(fields: [userUid], references: [uid])
+  userUid   String
+}
+
+model Remote {
+  id        String       @id @default(uuid())
+  host      String
+  port      Int
+  databases Database[]
+  type      DatabaseType
 }
